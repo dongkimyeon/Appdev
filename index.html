@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>오늘한상 프로토타입</title>
+  <meta name="description" content="1인 가구를 위한 개인 맞춤 영양 식사 서비스 — 나에게 필요한 식사를, 필요한 만큼" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="stage">
+    <!-- 발표용 좌측 패널: 서비스 이용 프로세스 -->
+    <aside class="panel panel-left">
+      <div class="panel-brand">
+        <div class="brand-mark">한</div>
+        <div>
+          <div class="brand-name">오늘한상</div>
+          <div class="brand-tag">나에게 필요한 식사를, 필요한 만큼</div>
+        </div>
+      </div>
+      <div class="panel-title">서비스 이용 프로세스</div>
+      <ol class="flow" id="flow">
+        <li data-step="0"><span class="flow-num">0</span><div><b>정보·식사 데이터 수집</b><small>신체 정보, 목표, 식습관</small></div></li>
+        <li data-step="1"><span class="flow-num">1</span><div><b>현재 상태 분석</b><small>한 끼 영양 목표 설정</small></div></li>
+        <li data-step="2"><span class="flow-num">2</span><div><b>오늘 식사 제공</b><small>동네 반찬가게 당일 조리</small></div></li>
+        <li data-step="3"><span class="flow-num">3</span><div><b>실제 섭취 데이터 기록</b><small>반찬별로 먹은 양</small></div></li>
+        <li data-step="4"><span class="flow-num">4</span><div><b>영양 부족·과다 분석</b><small>목표 대비 섭취율</small></div></li>
+        <li data-step="5"><span class="flow-num">5</span><div><b>다음 식사 자동 조정</b><small>메뉴·밥 양·반찬 구성</small></div></li>
+        <li data-step="6"><span class="flow-num">6</span><div><b>다시 섭취 데이터 반영</b><small>기록이 쌓일수록 정확하게</small></div></li>
+      </ol>
+    </aside>
+
+    <!-- 폰 프레임 -->
+    <div class="device-slot">
+      <div class="device" id="device">
+        <div class="island"></div>
+        <div class="screen">
+          <div class="statusbar">
+            <span class="sb-time">9:41</span>
+            <span class="sb-icons">
+              <svg width="18" height="12" viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg>
+              <svg width="16" height="12" viewBox="0 0 16 12"><path d="M8 2.2c2.3 0 4.4.9 6 2.4l1.1-1.1A10 10 0 0 0 8 .6 10 10 0 0 0 .9 3.5L2 4.6a8.4 8.4 0 0 1 6-2.4Zm0 3.2c1.4 0 2.7.5 3.7 1.4l1.1-1.1A7 7 0 0 0 8 3.8a7 7 0 0 0-4.8 1.9l1.1 1.1c1-.9 2.3-1.4 3.7-1.4Zm0 3.2c-.6 0-1.2.2-1.6.6L8 10.8l1.6-1.6c-.4-.4-1-.6-1.6-.6Z"/></svg>
+              <svg width="27" height="13" viewBox="0 0 27 13"><rect x=".5" y=".5" width="23" height="12" rx="3.5" fill="none" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="20" height="9" rx="2"/><rect x="25" y="4.5" width="1.6" height="4" rx=".8" opacity=".4"/></svg>
+            </span>
+          </div>
+          <div class="app" id="app"></div>
+          <div class="home-indicator"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 발표용 우측 패널: 차별화 전략 -->
+    <aside class="panel panel-right">
+      <div class="panel-title">차별화 전략</div>
+      <div class="diff-card"><span>🎯</span><div><b>개인화</b><small>개인별 영양 상태에 따른 식사</small></div></div>
+      <div class="diff-card"><span>🏘️</span><div><b>지역화</b><small>동네 반찬가게와 제휴</small></div></div>
+      <div class="diff-card"><span>🔥</span><div><b>당일화</b><small>냉장·냉동이 아닌 당일 조리·당일 제공</small></div></div>
+      <div class="panel-note" id="panel-note">
+        “식사를 판매하는 것이 아니라,<br />1인 가구의 식사 관리를 제공한다.”
+      </div>
+    </aside>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
